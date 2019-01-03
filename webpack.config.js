@@ -1,4 +1,5 @@
 module.exports = {
+  devtool: 'source-maps',
   module: {
     rules: [
       {

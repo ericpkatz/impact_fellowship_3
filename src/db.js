@@ -1,11 +1,18 @@
 const faker = require('faker');
 
+
+const generateCompany = ()=> {
+  return { id: faker.random.number(), name: faker.company.companyName(), description: faker.company.catchPhrase()};
+};
+
 const seed = (count)=> {
   const companies = [];
   while(companies.length < count){
-    companies.push({ id: faker.random.number(), name: faker.company.companyName(), description: faker.company.catchPhrase()});
+    companies.push(generateCompany());
   }
   return companies;
 }
 
-export { seed };
+const foo = seed;
+
+export { foo, generateCompany };
